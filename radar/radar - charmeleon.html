@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+    <title>charmander radar</title>
+ 
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+ 
+        #myChart {
+            height: 100%;
+            width: 100%;
+            min-height: 250px;
+        }
+ 
+        .zc-ref {
+            display: none;
+        }
+ 
+        zing-grid[loading] {
+            height: 450px;
+        }
+
+        legend {
+
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id='myChart' align="right"><a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a></div>
+    <script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+        var myConfig = {
+            type: 'radar',
+            legend: {
+                layout: "1x3", 
+                "align": "center", 
+                "vertical-align": "bottom"
+
+            },
+            plot: {
+                aspect: 'area',
+                animation: {
+                    effect: 3,
+                    sequence: 1,
+                    speed: 700
+                }
+            },
+            scaleV: {
+                visible: false
+            },
+            scaleK: {
+                values: '0:5:1',
+                labels: ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
+                item: {
+                    fontColor: '#607D8B',
+                    backgroundColor: "white",
+                    borderColor: "#aeaeae",
+                    borderWidth: 1,
+                    padding: '5 10',
+                    borderRadius: 10
+                },
+                refLine: {
+                    lineColor: '#95e508'
+                },
+                tick: {
+                    lineColor: '#59869c',
+                    lineWidth: 2,
+                    lineStyle: 'dotted',
+                    size: 15
+                },
+                guide: {
+                    lineColor: "#607D8B",
+                    lineStyle: 'solid',
+                    alpha: 0.3,
+                    backgroundColor: "#c5c5c5 #718eb4"
+                }
+            },
+            series: [{
+                    values: [58, 64, 58, 80, 65, 80],
+                    text: 'base stats', 
+                },
+                {
+                    values: [226, 119, 108, 148, 121, 148],
+                    text: 'lv 100 min stats',
+                    lineColor: '#b80505',
+                    backgroundColor: '#fb3a3a', 
+                }, 
+                {
+                    values: [320, 249, 236, 284, 251, 284],
+                    text: 'lv 100 max stats',
+                    lineColor: '#4f9400',
+                    backgroundColor: '#adea67'
+                }
+            ]
+        };
+ 
+        zingchart.render({
+            id: 'myChart',
+            data: myConfig,
+            height: '100%',
+            width: '100%'
+        });
+    </script>
+</body>
+ 
+</html>
