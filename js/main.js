@@ -46,18 +46,14 @@ let myConfig = {
       ]
     };
 
-
-
-var shapes = {
-  shapes: [
-    {
-      type: "circle",
-      'background-color': "#5297b6",
-      size:80,
-      x:100,
-      y: 100
-    }
-  ]
+var myshape = {
+    "type": "null",
+    "shapes": [{
+        "type": "rect",
+        "background-color": "#5297b6",
+        "height": 40,
+        "width": 40
+    }]
 };
 // Render Method[3]
 zingchart.render({
@@ -67,7 +63,7 @@ zingchart.render({
 
 zingchart.render({
   id: 'test_shape',
-  data: shapes,
+  data: myshape,
   height : "100%",
   width: "100%"
 })

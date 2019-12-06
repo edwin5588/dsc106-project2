@@ -132,3 +132,13 @@ body {
     left: 0%;
   }
 }
+
+
+/*  CREATING A CIRCLE  */
+
+.circle{
+  height: 50px;
+  width: 50px;
+  background-color: #FF0000;
+  border-radius: 50%;
+}
