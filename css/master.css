@@ -135,10 +135,18 @@ body {
 
 
 /*  CREATING A CIRCLE  */
+/*
+blue: #0000FF
+red: #FF0000
+green: #008000
 
+
+*/
 .circle{
-  height: 50px;
-  width: 50px;
-  background-color: #FF0000;
+  height: 35px;
+  width: 35px;
+  background-color: #008000;
   border-radius: 50%;
+  x: 100;
+  y: 300;
 }
