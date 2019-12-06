@@ -1,7 +1,7 @@
 let myConfig = {
       type: 'bar',
       title: {
-        text: 'Data Basics',
+        text: 'Base Stats',
         fontSize: 24,
       },
       legend: {
@@ -9,13 +9,13 @@ let myConfig = {
       },
       scaleX: {
         // Set scale label
-        label: { text: 'Days' },
+        label: { text: 'Type' },
         // Convert text on scale indices
-        labels: [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]
+        labels: [ 'Health', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']
       },
       scaleY: {
         // Scale label with unicode character
-        label: { text: 'Temperature (°F)' }
+        label: { text: 'Stat' }
       },
       plot: {
         // Animation docs here:
@@ -30,24 +30,44 @@ let myConfig = {
       series: [
         {
           // Plot 1 values, linear data
-          values: [23,20,27,29,25,17,15],
-          text: 'Week 1',
+          values: [44,48,65,50,64,43],
+          text: 'Squirtle',
         },
         {
           // Plot 2 values, linear data
-          values: [35,42,33,49,35,47,35],
-          text: 'Week 2'
+          values: [39,52,43,60,50,65],
+          text: 'Charmander'
         },
         {
           // Plot 2 values, linear data
-          values: [15,22,13,33,44,27,31],
-          text: 'Week 3'
+          values: [45,49,49,65,65,45],
+          text: 'Bulbasaur'
         }
       ]
     };
 
-    // Render Method[3]
-    zingchart.render({
-      id: 'myChart',
-      data: myConfig,
-    });
+
+
+var shapes = {
+  shapes: [
+    {
+      type: "circle",
+      'background-color': "#5297b6",
+      size:80,
+      x:100,
+      y: 100
+    }
+  ]
+};
+// Render Method[3]
+zingchart.render({
+  id: 'myChart',
+  data: myConfig
+});
+
+zingchart.render({
+  id: 'test_shape',
+  data: shapes,
+  height : "100%",
+  width: "100%"
+})
