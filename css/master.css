@@ -142,11 +142,38 @@ green: #008000
 
 
 */
-.circle{
-  height: 35px;
-  width: 35px;
-  background-color: #008000;
+.circle1{
+  height: 30px;
+  width: 30px;
+  background-color: #00FF00;
   border-radius: 50%;
   x: 100;
   y: 300;
+  position: relative;
+  top: -560px;
+  left: -240px;
+}
+
+.circle2{
+  height: 30px;
+  width: 30px;
+  background-color: #0000FF;
+  border-radius: 50%;
+  x: 100;
+  y: 300;
+  position: relative;
+  top: -785px;
+  left: 110px;
+}
+
+.circle3{
+  height: 30px;
+  width: 30px;
+  background-color: #FF0000;
+  border-radius: 50%;
+  x: 100;
+  y: 300;
+  position: relative;
+  top: -750px;
+  left: -110px;
 }
