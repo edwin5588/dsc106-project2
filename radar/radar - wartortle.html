@@ -3,9 +3,15 @@
  
 <head>
     <meta charset="utf-8">
-    <title>charmander radar</title>
+    <title>wartortle stats</title>
  
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
     <style>
         html,
         body {
@@ -34,11 +40,17 @@
 </head>
  
 <body>
-    <div id='myChart' align="right"><a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a></div>
+  <h1 align = "center">More About Wartortle</h1>
+
+    <div id='myChart' style="width: 50%; height: 600px; float: right;"><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
     <script>
         ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
         var myConfig = {
             type: 'radar',
+            title: {
+                text: "Base Stats"
+
+            },
             legend: {
                 layout: "1x3", 
                 "align": "center", 
@@ -107,6 +119,75 @@
             data: myConfig,
             height: '100%',
             width: '100%'
+        });
+    </script>
+
+    <div id="container" style="width: 50%; height: 600px; float: left;"></div>
+
+    <script type="text/javascript">
+        
+        Highcharts.chart('container', {
+
+          chart: {
+            type: 'boxplot'
+          },
+
+          title: {
+            text: 'Box Plot Against All Pokemon'
+          },
+
+          legend: {
+            enabled: false
+          },
+
+          xAxis: {
+            categories: ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
+            title: {
+              text: 'Category'
+            }
+          },
+
+          yAxis: {
+            title: {
+              text: 'Values'
+            }
+          },
+
+          series: [{
+            name: 'Values',
+            data: [
+              [1, 50, 65, 80, 255],
+              [5, 55, 75, 100, 190],
+              [5, 50, 70, 90, 230],
+              [10, 49, 65, 95, 194],
+              [20, 50, 70, 90, 230], 
+              [5, 45, 65, 90, 180]
+            ],
+            tooltip: {
+              headerFormat: '<em>Category {point.key}</em><br/>'
+            }
+          }, {
+            name: 'Key',
+            color: Highcharts.getOptions().colors[0],
+            type: 'scatter',
+            data: [ // x, y positions where 0 is the first category
+              [59],
+              [63],
+              [80],
+              [65], 
+              [80], 
+              [58]
+            ],
+            marker: {
+              fillColor: 'red',
+              lineWidth: 1,
+              lineColor: Highcharts.getOptions().colors[0]
+            },
+            tooltip: {
+              pointFormat: 'Value: {point.y}'
+            }
+          }]
+
         });
     </script>
 </body>
