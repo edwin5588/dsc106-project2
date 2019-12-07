@@ -1,7 +1,7 @@
 let myConfig = {
       type: 'bar',
       title: {
-        text: 'Base Stats',
+        text: 'Base Stats Comparison of All Three Pokemons',
         fontSize: 24,
       },
       legend: {
