@@ -3,28 +3,27 @@
 }
 
 body, html{
-  height: 120%;
+  height: 100%;
 }
 
 /* background image */
 .bg-image{
-  background-image: url('../photos/ash.png');
+  background-image: url('../photos/background.jpg');
   /* Add the blur effect */
   background-size: cover;
   display: block;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  height: 800px;
+  filter: blur(50px);
+  -webkit-filter: blur(8px);
+  height: 2500px;
   left: 0;
   position: fixed;
   right: 0;
   z-index: 1;
+  opacity: 0.6;
 }
 
 .content {
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 3px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   top: 10px;
   left: 0;
@@ -48,6 +47,13 @@ body, html{
   content: "";
   clear: both;
   display: table;
+
+}
+
+
+.row{
+  /* background color for the row div */
+  background: lightblue;
 }
 
 /*  CREATING A CIRCLE  */
@@ -92,7 +98,4 @@ green: #008000
   position: relative;
   top: -750px;
   left: -110px;
-}
-
-.kanto{
 }
