@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
     <meta charset="utf-8">
-    <title>charmander radar</title>
- 
+    <title>Squirtle Radar</title>
+
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <style>
         html,
@@ -12,17 +12,17 @@
             height: 100%;
             width: 100%;
         }
- 
+
         #myChart {
             height: 100%;
             width: 100%;
             min-height: 250px;
         }
- 
+
         .zc-ref {
             display: none;
         }
- 
+
         zing-grid[loading] {
             height: 450px;
         }
@@ -32,7 +32,7 @@
         }
     </style>
 </head>
- 
+
 <body>
     <div id='myChart' align="right"><a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a></div>
     <script>
@@ -40,8 +40,8 @@
         var myConfig = {
             type: 'radar',
             legend: {
-                layout: "1x3", 
-                "align": "center", 
+                layout: "1x3",
+                "align": "center",
                 "vertical-align": "bottom"
 
             },
@@ -85,14 +85,14 @@
             },
             series: [{
                     values: [44, 48, 65, 50, 64, 43],
-                    text: 'base stats', 
+                    text: 'base stats',
                 },
                 {
                     values: [198, 90, 121, 94, 119, 81],
                     text: 'lv 100 min stats',
                     lineColor: '#b80505',
-                    backgroundColor: '#fb3a3a', 
-                }, 
+                    backgroundColor: '#fb3a3a',
+                },
                 {
                     values: [292, 214, 251, 218, 249, 203],
                     text: 'lv 100 max stats',
@@ -101,7 +101,7 @@
                 }
             ]
         };
- 
+
         zingchart.render({
             id: 'myChart',
             data: myConfig,
@@ -110,5 +110,5 @@
         });
     </script>
 </body>
- 
+
 </html>
