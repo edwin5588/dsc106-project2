@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
     <meta charset="utf-8">
     <title>wartortle stats</title>
- 
+
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -18,17 +18,17 @@
             height: 100%;
             width: 100%;
         }
- 
+
         #myChart {
             height: 100%;
             width: 100%;
             min-height: 250px;
         }
- 
+
         .zc-ref {
             display: none;
         }
- 
+
         zing-grid[loading] {
             height: 450px;
         }
@@ -38,8 +38,11 @@
         }
     </style>
 </head>
- 
+
 <body>
+  <a href="../index.html">click here to go back to the main page</a>
+  <br>
+  <a href="../squirtle.html">click here to go back to timeline</a>
   <h1 align = "center">More About Wartortle</h1>
 
     <div id='myChart' style="width: 50%; height: 600px; float: right;"><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
@@ -52,8 +55,8 @@
 
             },
             legend: {
-                layout: "1x3", 
-                "align": "center", 
+                layout: "1x3",
+                "align": "center",
                 "vertical-align": "bottom"
 
             },
@@ -97,14 +100,14 @@
             },
             series: [{
                     values: [59, 63, 80, 65, 80, 58],
-                    text: 'base stats', 
+                    text: 'base stats',
                 },
                 {
                     values: [228, 117, 148, 121, 148, 108],
                     text: 'lv 100 min stats',
                     lineColor: '#b80505',
-                    backgroundColor: '#fb3a3a', 
-                }, 
+                    backgroundColor: '#fb3a3a',
+                },
                 {
                     values: [322, 247, 284, 251, 284, 236],
                     text: 'lv 100 max stats',
@@ -113,7 +116,7 @@
                 }
             ]
         };
- 
+
         zingchart.render({
             id: 'myChart',
             data: myConfig,
@@ -125,7 +128,7 @@
     <div id="container" style="width: 50%; height: 600px; float: left;"></div>
 
     <script type="text/javascript">
-        
+
         Highcharts.chart('container', {
 
           chart: {
@@ -160,7 +163,7 @@
               [5, 55, 75, 100, 190],
               [5, 50, 70, 90, 230],
               [10, 49, 65, 95, 194],
-              [20, 50, 70, 90, 230], 
+              [20, 50, 70, 90, 230],
               [5, 45, 65, 90, 180]
             ],
             tooltip: {
@@ -174,8 +177,8 @@
               [59],
               [63],
               [80],
-              [65], 
-              [80], 
+              [65],
+              [80],
               [58]
             ],
             marker: {
@@ -191,5 +194,5 @@
         });
     </script>
 </body>
- 
+
 </html>
